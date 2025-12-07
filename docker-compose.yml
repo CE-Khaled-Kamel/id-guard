@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    # This command starts the Django development server
+    command: python manage.py runserver 0.0.0.0:8000
+    # "Volumes" sync your local folder with the container
+    # So when you save a file in VS Code, the container updates instantly
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    # Credentials to talk to the database
+    environment:
+      - DB_NAME=id_guard_db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=db
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=id_guard_db
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  postgres_data:
