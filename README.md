@@ -20,4 +20,4 @@ The system uses a 3-stage pipeline to handle noisy real-world images:
 You can test the live API directly from your terminal:
 
 ```bash
-curl.exe -X POST -F "image=@your_test_image.jpg" [https://id-guard-api.onrender.com/api/verify/](https://id-guard-api.onrender.com/api/verify/)
+curl -X POST -F "image=@your_test_image.jpg" https://id-guard-api.onrender.com/api/verify/
