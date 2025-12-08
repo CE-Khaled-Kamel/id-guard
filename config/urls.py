@@ -21,4 +21,5 @@ from api.views import IDVerificationView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/verify/', IDVerificationView.as_view(), name='verify-id'),
+    path('', home, name='home')
 ]
