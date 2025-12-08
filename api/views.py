@@ -37,31 +37,31 @@ class IDVerificationView(APIView):
                 {"error": str(e)}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-    
-    def home(request):
-        return HttpResponse("""
-        <html>
-            <head>
-                <title>ID-Guard API 🛡️</title>
-                <style>
-                    body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
-                    h1 { color: #333; }
-                    .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-                    code { background: #eee; padding: 5px; border-radius: 5px; display: block; margin: 10px 0; text-align: left; }
-                </style>
-            </head>
-            <body>
-                <div class="container">
-                    <h1>ID-Guard API is Live 🟢</h1>
-                    <p>Welcome to the Automated Identity Verification Microservice.</p>
-                    <hr>
-                    <h3>How to use:</h3>
-                    <p>Send a POST request with an image file to:</p>
-                    <code>POST /api/verify/</code>
-                    
-                    <h3>Example (Terminal):</h3>
-                    <code>curl -X POST -F "image=@test_id.jpg" https://id-guard-api.onrender.com/api/verify/</code>
-                </div>
-            </body>
-        </html>
-        """)
+
+def home(request):
+    return HttpResponse("""
+    <html>
+        <head>
+            <title>ID-Guard API 🛡️</title>
+            <style>
+                body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
+                h1 { color: #333; }
+                .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+                code { background: #eee; padding: 5px; border-radius: 5px; display: block; margin: 10px 0; text-align: left; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>ID-Guard API is Live 🟢</h1>
+                <p>Welcome to the Automated Identity Verification Microservice.</p>
+                <hr>
+                <h3>How to use:</h3>
+                <p>Send a POST request with an image file to:</p>
+                <code>POST /api/verify/</code>
+                
+                <h3>Example (Terminal):</h3>
+                <code>curl -X POST -F "image=@test_id.jpg" https://id-guard-api.onrender.com/api/verify/</code>
+            </div>
+        </body>
+    </html>
+    """)
