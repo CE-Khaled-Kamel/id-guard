@@ -2,7 +2,7 @@
 
 A Dockerized Microservice for automated KYC (Know Your Customer) verification. It processes images of California Driver's Licenses and extracts the ID number using Computer Vision.
 
-**Live API:** [https://id-guard-api.onrender.com/api/verify/](https://id-guard-api.onrender.com/api/verify/)
+**Live API:** [https://id-guard-api.onrender.com](https://id-guard-api.onrender.com)
 
 ## 🚀 Tech Stack
 - **Backend:** Python 3.10, Django Rest Framework (DRF)
